@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mtec Acessórios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Silkscreen:wght@400;700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <header id="cabecalho">
+        <img src="mtec.png" id="logo">
+    </header>
+    <div id="barraDeControle">
+        <button id="sairBarraDeControle" onclick="sairBarraDeControle()" class="SairBtn">X</button>
+        <h3>SETORES</h3>
+
+        <!--Criação de setores-->
+        <button class="BtnCriarElementos"  id="criarSetor">Criar</button>
+        <div id="criarSetorMenu">
+            <button id="btnSairCriarSetorMenu" class="SairBtn">X</button>
+            Nome do novo setor:<input type="text" id="nomeSetor">
+            <br>
+            ID do novo setor:<input type="text" id="IDSetor">
+            <button id="criarSetorBtn">Criar</button>
+        </div>
+
+        <!--Apagamento de setores-->
+        <button class="BtnExcluirElementos" id="excluirSetor">Excluir</button>
+        <div id="excluirSetorMenu">
+            <button id="btnSairExcluirSetorMenu" class="SairBtn">X</button>
+            ID do setor á ser excluido:<input type="text" id="IDSetorASerExcluido">
+            <button id="excluirSetorBtn">excluir</button>
+        </div>
+        <!--Ediçâo de setores-->
+        <button class="BtnEditarElementos" id="editarSetor">Editar</button>
+        <div id="editarSetorMenu">
+            <button id="btnSairEditarSetorMenu" class="SairBtn">X</button>
+            ID do setor á ser editado: <input type="text" id="IDSetorASerEditado">
+            <br>
+            Novo ID: <input type="text" id="novoIDSetor">
+            <br>
+            Novo Nome: <input type="text" id="novoNomeSetor">
+            <button id="editarSetorBtn">Editar</button>
+
+        </div>
+        <h3>PRODUTOS</h3>
+        <button class="BtnCriarElementos" id="criarProduto">Criar</button>
+        <div id="criarProdutoMenu">
+            <button id="btnSairCriarProdutoMenu" class="SairBtn">X</button>
+            Nome do produto:<input type="text" id="nomeProduto">
+            <br>
+            Id do produto:<input type="text" id="IDProduto">
+            <br>
+            Preço do produto:<input type="text" id="precoProduto">
+            <br>
+            Link da foto:<input type="text" id="linkImg">
+            <br>
+            ID do setor do produto:<input type="text" id="IdSetorProduto">
+            <button id="criarNovoProdutoBtn">Criar</button>
+
+        </div>
+        <button class="BtnExcluirElementos" id="excluirProduto">Excluir</button>
+        <div id="excluirProdutoMenu">
+            <button id="btnSairExcluirProdutoMenu" class="SairBtn">X</button>  
+            ID do produto á ser excluido: <input type="text" id="IDProdutoASerExcluido">
+            <button id="excluirProdutoBtn">excluir</button>
+        </div>
+         
+        <button class="BtnEditarElementos" id="editarProduto">Editar</button>
+        <div id="editarProdutoMenu">
+            <button id="btnSairEditarProdutoMenu" class="SairBtn">X</button>  
+            ID do produto: <input type="text" id="IDProdutoASerEditado">
+            Novo nome: <input type="text" id="novoNomeProduto">
+            Novo ID: <input type="text" id="novoIDProduto">
+            <br>
+            Novo Preço: <input type="text" id="novoPrecoProduto">
+            Nova imagem:<input type="text" id="novoLinkImgProduto">
+            <button id="editarProdutoBtn">editar</button>
+        </div>
+    </div> 
+    <!--Parte de elementos graficos-->
+    <!--Div setores reune todas as divs da classe setor, essas divs organizam os produtos por categorias, que são inseridas ao longo do tempo pelo cliente-->
+    <div id="setores">
+    <div class="Setor" id="produtos">
+        <h1 class="NomeSetor">Produtos</h1>
+    <!--Os carousel são uma seção que agrupa os diversos produtos que são inseridos em uma categoria especifica pelo cliente-->
+        <div class="Carousel" id="produtosCarousel">
+    <!--As divs da classe pruduto são o proprio produto em si, e contem atributos como foto do prduto, nome, preço e descrição, que são todos fornecidos pelo usuario-->
+            
+        </div>
+    </div>
+    </div>
+    <!--A div login serve exclusivamente para o usuario acessar a barra de controle e conseguir inserir mais setores ou produtos-->
+    <div class="LoginInativo"id="containerLog-in">
+        <form>
+            Usuario:<input type="text" id="usuario">
+            Senha:<input type="password" id="senha">
+        </form>
+        <button id="login-btn">Log-in</button>
+        <br>
+    </div>
+    <br>
+    <footer id="rodape">
+    <h5>Endereço: Rua Nelson Ferreira De Souza 686, Alvorada. Jequitinhonha-MG</h5>
+    <br>
+    <h5>Telefone: +55 33 9875-7763</h5>
+    <br>
+    <h5 id="acssPaglog-in">log-in</h5>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

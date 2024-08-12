@@ -1,0 +1,496 @@
+*{
+    margin-top: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0px;
+}
+body{
+    user-select: none;
+    background-color: rgb(228, 228, 228);
+}
+
+#cabecalho{
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    background-color:#04AA6D;
+    margin-bottom: 40px;
+    top: 0;
+}
+#cabecalho #logo{ 
+    border-radius: 11px; 
+    margin: 0 auto;
+    display: flex;
+    height:80px;
+    width:200px ;
+
+}
+
+.Setor{
+    height: 470px;
+    margin-top: 40px;
+    z-index: 1;
+    display:block;
+}
+
+.Setor .NomeSetor{
+    font-family:'Silkscreen';
+    color:#1bbb06;
+    margin: 0px;
+
+}
+
+.Carousel{
+    display:flex;
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    overflow-x: auto;
+    border-color: #cecece;
+}
+
+.Produto{
+    display: block;
+    background-color:rgb(235, 235, 235);
+    min-width:260px;
+    height:350px;
+    margin-bottom:9px;
+    margin-top: 9px;
+    margin-left: 6px;
+    margin-right: 6px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+}
+.Produto:hover{
+    background-color:rgb(175, 175, 175);
+    transition: 1000ms;
+}
+  
+@keyframes fadein {
+     0% {
+        transform:translateY(120px)
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+.Comprar{
+    display: none;
+    height: 0px;
+    width: 100%;
+}
+.Produto:hover .Comprar{
+    padding-top:24px;
+    display: block;
+    height: 190px;
+    background-color: #cfcfcfe7;
+    min-width: 200px;
+    animation: fadein 2s;
+}
+.Comprar a {
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-style: normal;
+    font-size: larger;
+    text-decoration: none;
+    background-color: #036e47;
+    color: azure;
+    height:40px;
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
+}
+.Comprar a img{
+    height: 20px;
+    width: 20px;
+}
+.Imagem{
+    border-style:solid;
+    border-width: 1px;
+    border-color:rgb(207, 207, 207);
+    margin: 0 auto;
+    height: 58%;
+    width: 99%;
+    background-color: #e8e8ff;
+}
+.Imagem .ImagemProduto{
+    -webkit-user-drag: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+.Nome{
+    margin-inline-start: 4px;
+    font-family:'Kanit', sans-serif;
+    height:45;
+    max-height:45px;
+    font-size:16px;
+    margin-top: 0px;
+    font-weight:500;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+.Nome #PNome{
+    margin-bottom: 0px;
+}
+
+.Preco{
+    
+    height:20px;
+    width: 90%;
+    color: crimson;
+    font-size: 18px;
+    font-family:'kanit';
+    font-weight: 400;
+    margin-inline-start: 0%;
+}
+.Preco #pPreco{
+    margin-inline-start: 4px;
+    margin-top: 10px;
+}
+
+#rodape{  
+    margin: 0 auto;
+    min-height: 110px;
+    max-width: 100%;
+    padding-top: 3%;
+    background-color:#04AA6D;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    margin-top: 40px;
+    text-align: center;
+    
+}
+
+#rodape h5{
+    
+    display:block;
+    margin: 0 auto;
+    bottom: 0;
+    color:rgb(0, 0, 0);
+}
+
+#acssPaglog-in:hover{
+    text-decoration:underline;
+    width: 40px;
+}
+
+.LoginInativo{
+    display: none;
+}
+
+.LoginAtivo{
+    border: solid;
+    padding-top:4%;
+    padding-left: 4px;
+    z-index: 5;
+    display: block;
+    position: absolute;
+    width:240px;
+    min-height:110px;
+    max-height: 110px;
+    margin-left: 43%;
+    margin-bottom:20%;
+    background-color:#04AA6D;
+}
+
+.LoginAtivo #usuario{
+    width: 159px;
+}
+
+.LoginAtivo button{
+    margin-top: 4%;
+    margin-left: 68%;
+}
+
+#barraDeControle{
+    display: none;
+    z-index: 5;
+    position: absolute;
+    height:900px;
+    width: 130px;
+    background-color:#039660;
+}
+#barraDeControle button{
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top: 40px;
+    margin-left:30px; 
+}
+#barraDeControle h3{
+    margin: 0 auto;
+    padding: 20px
+    
+}
+#barraDeControle #sairBarraDeControle{
+    border-color: transparent;
+    border-width: 0px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    margin-inline-start: 74%;
+    padding-right:13px;
+    max-width: 20px;
+    max-height: 20px;
+
+}
+
+.BtnCriarElementos{
+    border: none;
+    border-radius: 3px;
+    background-color:#1bbb06;
+    color: #e8e8ff;
+}
+
+.BtnExcluirElementos{
+    border: none;
+    border-radius: 3px;
+    background-color: crimson;
+    color: #e8e8ff;
+}
+
+.BtnEditarElementos{
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(12, 71, 235);
+    color: #e8e8ff;
+ 
+}
+.SairBtn{
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    color: azure;
+    font-weight: 400;
+    border: transparent;
+}
+/*Funções basicas da barra de controle relacionada aos setores*/
+
+/*Criação de setores*/
+#criarSetorMenu{
+    display: none;
+    padding-top: 7px;
+    color: #e8e8ff;
+    padding-left: 4px;
+    min-width: 260px;
+    max-width: 20px;
+    margin-inline-start: 110px;
+    background-color: #036e47;
+    position: absolute;
+}
+#criarSetorMenu input{
+    margin-bottom: 3px;
+    width: 90px;
+    
+}
+#criarSetorMenu #btnSairCriarSetorMenu{
+    margin-top: 0px;
+    margin-bottom: 14px;
+    margin-inline-start: 84%;
+    padding-right:13px;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+#criarSetorMenu #criarSetorBtn{
+    margin-bottom: 20px;
+    height: 20px;
+    margin-inline-start: 68%;
+}
+
+#criarSetorMenu #IDSetor{
+    width:117px;
+}
+
+/*Exclusão de setores*/
+#excluirSetorMenu{
+    display: none;
+    padding-top: 7px;
+    color: #e8e8ff;
+    padding-left: 4px;
+    min-width: 260px;
+    max-width: 20px;
+    margin-inline-start: 110px;
+    background-color: #036e47;
+    position: absolute;
+}
+
+#excluirSetorMenu #btnSairExcluirSetorMenu{
+    margin-top: 0px;
+    margin-bottom: 14px;
+    margin-inline-start: 84%;
+    padding-right:13px;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+#excluirSetorMenu #excluirSetorBtn{
+    margin-bottom: 20px;
+    height: 20px;
+    margin-inline-start: 68%;
+}
+
+#excluirSetorMenu #excluirSetorMenu #IDSetor{
+    width:117px;
+    margin-bottom: 6px;
+}
+
+/*Edição de setores*/
+
+#editarSetorMenu{
+    display: none;
+    padding-top: 7px;
+    color: #e8e8ff;
+    padding-left: 4px;
+    min-width: 260px;
+    max-width: 20px;
+    margin-inline-start: 110px;
+    background-color: #036e47;
+    position: absolute;
+}
+
+#editarSetorMenu input{
+    margin-bottom: 3px;
+    width: 50px;
+}
+
+#editarSetorMenu #novoIDSetor{
+    width: 167px;
+}
+
+#editarSetorMenu #novoNomeSetor{
+    width: 140px;
+}
+
+#editarSetorMenu #btnSairEditarSetorMenu{
+    margin-top: 0px;
+    margin-bottom: 14px;
+    margin-inline-start: 84%;
+    padding-right:13px;
+    height: 20px;
+    width: 20px;
+}
+
+#editarSetorMenu #editarSetorBtn{
+    margin-bottom: 20px;
+    height: 20px;
+    margin-inline-start: 68%;
+}
+
+/*Funções basicas da barra de controle relacionada aos produtos*/
+/*Criação de produtos*/
+#criarProdutoMenu{
+    display: none;
+    padding-top: 7px;
+    color: #e8e8ff;
+    padding-left: 4px;
+    min-width: 260px;
+    margin-inline-start: 110px;
+    background-color: #036e47;
+    position: absolute;
+}
+
+#criarProdutoMenu input{
+    margin-bottom: 3px;
+    width: 90px;
+}
+
+#criarProdutoMenu #NomeProduto{
+    width: 124px;
+}
+
+#criarProdutoMenu #IdProduto{
+    width: 154px;
+}
+
+#criarProdutoMenu #precoProduto{
+    width: 124px;
+}
+
+#criarProdutoMenu #linkImg{
+    width:164px ;
+}
+
+#criarProdutoMenu #btnSairCriarProdutoMenu{
+    margin-top: 0px;
+    margin-bottom: 14px;
+    margin-inline-start: 230px;
+    padding-right:13px;
+    width: 20px;
+    height: 20px;
+}
+
+#criarProdutoMenu #criarNovoProdutoBtn{
+    margin-bottom: 20px;
+    height: 20px;
+    margin-inline-start: 190px;
+}
+
+#excluirProdutoMenu{
+    display: none;
+    padding-top: 7px;
+    color: #e8e8ff;
+    padding-left: 4px;
+    min-width: 260px;
+    margin-inline-start: 110px;
+    background-color: #036e47;
+    position: absolute;
+}
+
+#criarProdutoMenu input{
+    margin-bottom: 3px;
+    width: 90px;
+}
+
+#excluirProdutoMenu #btnSairExcluirProdutoMenu{
+    margin-top: 0px;
+    margin-bottom: 14px;
+    margin-inline-start: 230px;
+    padding-right:13px;
+    width: 20px;
+    height: 20px;
+}
+
+#excluirProdutoMenu #excluirProdutoBtn{
+    margin-bottom: 20px;
+    height: 20px;
+    margin-inline-start: 190px;
+}
+/*Edição de Produtos*/
+#editarProdutoMenu{
+    display: none;
+    padding-top: 7px;
+    color: #e8e8ff;
+    padding-left: 4px;
+    min-width: 260px;
+    margin-inline-start: 110px;
+    background-color: #036e47;
+    position: absolute;
+}
+
+#editarProdutoMenu input{
+    margin-bottom: 3px;
+    max-width: 140px;
+}
+
+#editarProdutoMenu #btnSairEditarProdutoMenu{
+    margin-top: 0px;
+    margin-bottom: 14px;
+    margin-inline-start: 230px;
+    padding-right:13px;
+    width: 20px;
+    height: 20px;
+}
+
+#editarProdutoMenu #editarProdutoBtn{
+    margin-bottom: 20px;
+    height: 20px;
+    margin-inline-start: 190px;
+}
+
+
